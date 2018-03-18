@@ -1,4 +1,6 @@
 class Article < ApplicationRecord
+  has_many :comments
+
   validates :title, presence: { message: "El titulo del articulo debe estar presente" }, 
             uniqueness: { message: "El titulo del articulo debe ser unico" },
             format: { :with => /\A[a-zA-Z]+\z/, :message => "El titulo solo debe tener letras" }
