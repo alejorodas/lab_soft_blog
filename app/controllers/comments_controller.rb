@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_filter :load_article
+  before_action :load_article
 
   def create
     @comment = @article.comments.new(comment_params)
