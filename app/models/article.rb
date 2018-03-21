@@ -1,5 +1,6 @@
 class Article < ApplicationRecord
   has_many :comments
+  has_and_belongs_to_many :categories
 
   validates :title, presence: { message: "El titulo del articulo debe estar presente" }, 
             uniqueness: { message: "El titulo del articulo debe ser unico" },
